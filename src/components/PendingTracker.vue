@@ -40,16 +40,17 @@
       </div>
     </header>
 
-    <div class="bg-slate-800 rounded-xl p-2.5 shadow-lg grid grid-cols-2 gap-1 border border-slate-700 px-2">
+    <div
+      class="max-w-md mx-auto bg-slate-800 rounded-xl p-2.5 shadow-lg grid grid-cols-2 gap-1 border border-slate-700 px-2">
       <div class="border-r border-slate-700">
-        <p class="text-sm text-slate-400 tracking-wider">Pending: 
+        <p class="text-sm text-slate-400 tracking-wider">Pending:
           <span class="text-sm font-bold text-rose-400">{{ totals.pending }}</span>
         </p>
         <!-- <p class="text-xs text-slate-400 uppercase tracking-wider">Pending</p>
         <p class="text-xs font-bold text-rose-400">{{ totals.pending }}</p> -->
       </div>
       <div>
-        <p class="text-sm text-slate-400 tracking-wider">Done: 
+        <p class="text-sm text-slate-400 tracking-wider">Done:
           <span class="text-sm font-bold text-emerald-400">{{ totals.done }}</span>
         </p>
         <!-- <p class="text-xs text-slate-400 uppercase tracking-wider">Done</p>
@@ -102,8 +103,8 @@
             </button>
 
             <!-- Plus: galti se minus ho gaya to wapas badhao -->
-            <button @click="undo(name)"
-              class="w-full h-10 flex items-center justify-center rounded-xl bg-slate-700 hover:bg-slate-600 border border-slate-600 text-red-400"><svg
+            <button @click="undo(name)" :disabled="state.prayers[name].pending === 0"
+              class="w-full h-10 flex items-center justify-center rounded-xl bg-slate-700 hover:bg-slate-600 border border-slate-600 text-red-400 disabled:opacity-60"><svg
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
