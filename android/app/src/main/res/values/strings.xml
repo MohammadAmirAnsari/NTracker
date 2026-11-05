@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NTracker</string>
+    <string name="title_activity_main">NTracker</string>
+    <string name="package_name">com.ntracker.app</string>
+    <string name="custom_url_scheme">com.ntracker.app</string>
+</resources>
